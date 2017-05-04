@@ -5,13 +5,15 @@
  */
 import java.util.*;
 
-public class Solution
+public class Solution_only_main
 {
-    //MY METHODS CODE START
-    static int[] myArray;
 
-    void getInput()
+    public static void main(String[] args)
     {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        //MY CODE START
+        int[] myArray;
+
         Scanner scan = new Scanner(System.in);
         int length = scan.nextInt();
         myArray = new int[length];
@@ -19,10 +21,7 @@ public class Solution
         {
             myArray[i] = scan.nextInt();
         }
-    }
 
-    int sumSubArrays(int[] myArray)
-    {
         int counterOfNegativeSubArrays = 0;
         for (int k = 0; k < myArray.length; k++)
         {
@@ -36,17 +35,7 @@ public class Solution
                 }
             }
         }
-        return counterOfNegativeSubArrays;
-    }
-    //MY METHODS CODE END
-
-    public static void main(String[] args)
-    {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        //MY main CODE START
-        Solution solution = new Solution();
-        solution.getInput();
-        System.out.println(solution.sumSubArrays(myArray));
-        //MY main CODE END
+        System.out.println(counterOfNegativeSubArrays);
+        //MY CODE END
     }
 }
